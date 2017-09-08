@@ -37,7 +37,7 @@ public class DBConfig {
 		Properties properties = new Properties();
 		properties.setProperty("hibernate.hbm2ddl.auto","update");
 		properties.put("hibernate.show_sql", "true");
-		properties.put("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
+		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 		return properties;
 
 	}
