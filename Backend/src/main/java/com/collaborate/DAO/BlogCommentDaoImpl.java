@@ -14,12 +14,12 @@ import com.collaborate.Model.Blog;
 import com.collaborate.Model.BlogComment;
 
 @Repository("blogDAO")
-public class BlogCommentDAOImpl implements BlogCommentDAO {
+public class BlogCommentDaoImpl implements BlogCommentDao {
 	
 	@Autowired
 	SessionFactory sessionFactory;
 	
-	public BlogCommentDAOImpl(SessionFactory sessionFactory)
+	public BlogCommentDaoImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory=sessionFactory;
 	}
