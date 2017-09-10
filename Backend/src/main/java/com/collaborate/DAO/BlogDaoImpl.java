@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 
 import com.collaborate.Model.Blog;
 @Repository("blogDAO")
-public class BlogDAOImpl implements BlogDAO {
+public class BlogDaoImpl implements BlogDao {
 	
 	@Autowired
 	SessionFactory sessionFactory;
-	public BlogDAOImpl(SessionFactory sessionFactory)
+	public BlogDaoImpl(SessionFactory sessionFactory)
 	{
 		this.sessionFactory=sessionFactory;
 	}
