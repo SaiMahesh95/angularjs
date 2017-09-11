@@ -6,7 +6,7 @@ public class User
 {
 
 	private int userId;
-	private String Firstname,Lastname,Password,Role,Status,isonline;
+	private String Firstname,Lastname,Email,Password,Role,Status,isonline;
 	private int likes;
 	public int getUserId() {
 		return userId;
@@ -25,6 +25,12 @@ public class User
 	}
 	public void setLastname(String lastname) {
 		Lastname = lastname;
+	}
+	public String getEmail() {
+		return Email;
+	}
+	public void setEmail(String email) {
+		Email = email;
 	}
 	public String getPassword() {
 		return Password;
