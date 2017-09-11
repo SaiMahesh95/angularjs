@@ -6,27 +6,49 @@ public class User
 {
 
 	private int userId;
-	private String userContent,status,username;
+	private String Firstname,Lastname,Password,Role,Status,isonline;
 	private int likes;
-	
-	
-	public String getUserContent() {
-		return userContent;
+	public int getUserId() {
+		return userId;
 	}
-	public void setUserContent(String userContent) {
-		this.userContent = userContent;
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+	public String getFirstname() {
+		return Firstname;
+	}
+	public void setFirstname(String firstname) {
+		Firstname = firstname;
+	}
+	public String getLastname() {
+		return Lastname;
+	}
+	public void setLastname(String lastname) {
+		Lastname = lastname;
+	}
+	public String getPassword() {
+		return Password;
+	}
+	public void setPassword(String password) {
+		Password = password;
+	}
+	public String getRole() {
+		return Role;
+	}
+	public void setRole(String role) {
+		Role = role;
 	}
 	public String getStatus() {
-		return status;
+		return Status;
 	}
 	public void setStatus(String status) {
-		this.status = status;
+		Status = status;
 	}
-	public String getUsername() {
-		return username;
+	public String getIsonline() {
+		return isonline;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setIsonline(String isonline) {
+		this.isonline = isonline;
 	}
 	public int getLikes() {
 		return likes;
@@ -34,18 +56,7 @@ public class User
 	public void setLikes(int likes) {
 		this.likes = likes;
 	}
-	public Date getCreateDate() {
-		return createDate;
-	}
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
-	}
-	public void setUserId(int userId) {
-		this.userId = userId;
-	}
-	private Date createDate;
-	public int getUserId() 
-	{
-		return userId;
-	}
 }
+	
+	
+	
