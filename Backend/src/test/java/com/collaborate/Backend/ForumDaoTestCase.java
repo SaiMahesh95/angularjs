@@ -15,14 +15,14 @@ import com.collaborate.Model.Forum;
 public class ForumDaoTestCase {
 
 	
-	static ForumDao forumDAO;
+	static ForumDao forumDao;
 	@BeforeClass
 	public static void initialize()
 	{
 		AnnotationConfigApplicationContext annotationConfigAppContext=new AnnotationConfigApplicationContext();
 		annotationConfigAppContext.scan("com.collaborate");
 		annotationConfigAppContext.refresh();
-		forumDAO=(ForumDao)annotationConfigAppContext.getBean("forumDAO");
+		forumDao=(ForumDao)annotationConfigAppContext.getBean("forumDao");
 	}
 	
 	@Test
@@ -40,7 +40,7 @@ public class ForumDaoTestCase {
 	forum.setCreateDate(new java.util.Date());
 	forum.setLikes(0);
 	
-	assertTrue("problem in forum Creation",forumDAO.createForum(forum));
+	assertTrue("problem in forum Creation",forumDao.createForum(forum));
 	}
 	
 	
@@ -59,18 +59,9 @@ public class ForumDaoTestCase {
 	forum.setCreateDate(new java.util.Date());
 	forum.setLikes(0);
 	
-	assertTrue("problem in Approving forum",forumDAO.approveForum(forum));
+	assertTrue("problem in Approving forum",forumDao.approveForum(forum));
 	}
 	
 	
-	
-	
-	@Test
-	public void test()
-	{
-		fail("not yet implemented");
-	}
 	
 }
-
-
