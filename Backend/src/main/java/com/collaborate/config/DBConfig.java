@@ -16,6 +16,7 @@ import com.collaborate.DAO.BlogDao;
 import com.collaborate.DAO.BlogDaoImpl;
 import com.collaborate.Model.Blog;
 import com.collaborate.Model.Forum;
+import com.collaborate.Model.User;
 
 @Configuration
 @ComponentScan("com.collaborate")
@@ -50,6 +51,7 @@ public class DBConfig {
 	localsessionFactory.addProperties(getHibernateProperties());
 	localsessionFactory.addAnnotatedClass(Blog.class);
 	localsessionFactory.addAnnotatedClass(Forum.class);
+	localsessionFactory.addAnnotatedClass(User.class);
 	System.out.println("Session created");
 	return localsessionFactory.buildSessionFactory();
       }
