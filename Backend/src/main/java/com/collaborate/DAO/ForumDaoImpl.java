@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 import com.collaborate.Model.Blog;
 import com.collaborate.Model.Forum;
 
-@Repository("forumDAO")
+@Repository("forumDao")
 public class ForumDaoImpl implements ForumDao{
 	
 	@Autowired
