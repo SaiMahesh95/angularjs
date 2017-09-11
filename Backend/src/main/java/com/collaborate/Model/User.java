@@ -6,14 +6,10 @@ public class User
 {
 
 	private int userId;
-	private String userName,userContent,status,username;
+	private String userContent,status,username;
 	private int likes;
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+	
+	
 	public String getUserContent() {
 		return userContent;
 	}

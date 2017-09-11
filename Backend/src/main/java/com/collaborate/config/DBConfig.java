@@ -3,21 +3,23 @@ package com.collaborate.config;
 import java.util.Properties;
 
 import javax.sql.DataSource;
-import javax.transaction.Transactional;
-
 import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-import org.springframework.orm.hibernate3.LocalSessionFactoryBean;
-import org.springframework.orm.hibernate4.LocalSessionFactoryBuilder;
+import org.springframework.orm.hibernate5.HibernateTransactionManager;
+import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.collaborate.DAO.BlogDao;
+import com.collaborate.DAO.BlogDaoImpl;
+import com.collaborate.Model.Blog;
+import com.collaborate.Model.Forum;
 
 @Configuration
 @ComponentScan("com.collaborate")
 @EnableTransactionManagement
-
 public class DBConfig {
 	
 	public DataSource getDataSource() {
@@ -46,14 +48,23 @@ public class DBConfig {
      {
 	LocalSessionFactoryBuilder localsessionFactory = new LocalSessionFactoryBuilder(getDataSource());
 	localsessionFactory.addProperties(getHibernateProperties());
+	localsessionFactory.addAnnotatedClass(Blog.class);
+	localsessionFactory.addAnnotatedClass(Forum.class);
 	System.out.println("Session created");
 	return localsessionFactory.buildSessionFactory();
       }
-/*
-      @Bean
-      public Transactional getTransaction()
-      {
-    	  
-      }*/
+	
+	 @Bean
+     public HibernateTransactionManager getTransaction(SessionFactory sessionFactory)
+     {
+   	 	System.out.println("Transaction");
+		    return new HibernateTransactionManager(sessionFactory);
+     }
+
+    @Bean
+    public BlogDao getBlogDAO(SessionFactory sessionFactory)
+    {
+   	 return new BlogDaoImpl(sessionFactory);
+    }
       
 }

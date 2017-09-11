@@ -21,7 +21,7 @@ public class UserDaoImpl implements UserDao{
 	}
 	
 	@Transactional
-	public boolean createUser1(User user)
+	public boolean createUser(User user)
 	{
 		try
 		{
@@ -36,10 +36,6 @@ public class UserDaoImpl implements UserDao{
 		}
 	}
 
-	public boolean createUser(User user) {
-		// TODO Auto-generated method stub
-		return false;
-	}
 
 	public User getUser(int userId) {
 		// TODO Auto-generated method stub
