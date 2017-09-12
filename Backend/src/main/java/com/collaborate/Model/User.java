@@ -1,7 +1,12 @@
 package com.collaborate.Model;
 
-import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
+import org.springframework.stereotype.Component;
+@Entity
+@Table(name="user_details")
+@Component
 public class User 
 {
 

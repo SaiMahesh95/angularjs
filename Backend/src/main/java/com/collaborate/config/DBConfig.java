@@ -14,6 +14,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.collaborate.DAO.BlogDao;
 import com.collaborate.DAO.BlogDaoImpl;
+import com.collaborate.DAO.UserDao;
+import com.collaborate.DAO.UserDaoImpl;
 import com.collaborate.Model.Blog;
 import com.collaborate.Model.Forum;
 import com.collaborate.Model.User;
@@ -38,7 +40,7 @@ public class DBConfig {
 	private Properties getHibernateProperties()
 	{
 		Properties properties = new Properties();
-		properties.setProperty("hibernate.hbm2ddl.auto","update");
+		properties.setProperty("hibernate.hbm2ddl.auto","create");
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
 		return properties;
@@ -68,5 +70,9 @@ public class DBConfig {
     {
    	 return new BlogDaoImpl(sessionFactory);
     }
-      
+    @Bean
+    public UserDao getUserDAO(SessionFactory sessionFactory)
+{
+	return new UserDaoImpl(sessionFactory);
+}
 }

@@ -1,4 +1,4 @@
-package com.collaborate.Backend;
+/*package com.collaborate.Backend;
 
 import static org.junit.Assert.assertTrue;
 
@@ -46,3 +46,4 @@ public class UserDaoTestCase {
 	
 
 }
+*/

@@ -1,4 +1,4 @@
-package com.collaborate.DAO;
+/**package com.collaborate.DAO;
 
 
 import java.util.List;
@@ -10,10 +10,10 @@ import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.collaborate.Model.Blog;
+
 import com.collaborate.Model.BlogComment;
 
-@Repository("blogDao")
+@Repository("blogcommentDao")
 public class BlogCommentDaoImpl implements BlogCommentDao {
 	
 	@Autowired
@@ -95,3 +95,4 @@ public class BlogCommentDaoImpl implements BlogCommentDao {
 		}
 	}
 }
+**/

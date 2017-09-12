@@ -1,4 +1,4 @@
-package com.collaborate.Backend;
+/*package com.collaborate.Backend;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -68,3 +68,4 @@ public class BlogDaoTestCase {
 	
 	
 }
+*/

@@ -1,4 +1,4 @@
-package com.collaborate.Backend;
+/*package com.collaborate.Backend;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -65,4 +65,4 @@ public class ForumDaoTestCase {
 	
 	
 	
-}
+}*/

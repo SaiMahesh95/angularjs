@@ -1,4 +1,4 @@
-package com.collaborate.DAO;
+/**package com.collaborate.DAO;
 
 import java.util.List;
 
@@ -13,3 +13,4 @@ public interface BlogCommentDao {
     public boolean editBlogComment(int id);
 	public boolean deleteBlogComment(int id);
 }
+**/
